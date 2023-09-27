@@ -31,6 +31,6 @@ github install npusateri/perfcurve
 ```
 
 ## References
-Sher, Lawrence. (1977). The Perfect Curve: At Least for Grades. The Two-Year College Mathematics Journal. 8(3), 148–52. DOI: [https://doi.org/10.2307/3027265](https://doi.org/10.2307/3027265)
+Sher, Lawrence. (1977). The Perfect Curve: At Least for Grades. The Two-Year College Mathematics Journal. 8(3), 148–52. DOI: [https://doi.org/10.2307/3027265](https://doi.org/10.2307/3027265)  
 Haghish, E. F. (2020). Developing, maintaining, and hosting Stata statistical software on GitHub. The Stata Journal, 20(4), 931-951.
 
