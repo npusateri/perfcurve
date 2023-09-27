@@ -1,21 +1,27 @@
 clear all
 
-/* Set Working Directory to Location of Data */
+/*	Set Working Directory to Location of Data 
+	commented out for example */
 * cd 
 
-/* Import Data */
+/*	Import Data */
 import delimited "fictional_q1.csv"
 
-/* Curve Grades */
+/*	Curve Grades 
+	Here, the curve function is set to transform the pre-curve average (62.96) to an 80 */
 perfcurve q1 80
 
-/* Add Bonus (up to 100 pts total) */
+/*  Add Bonus (up to 100 pts total) 
+	It is critical that this step is done after the curve. 
+	If the Bonus is added before the curve, it no longer functions as an optinal bonus 
+	If there is no bonus, this block can be skipped */
 gen nocurve=q1+bonus 
-	label variable nocurve "Uncurved Q1 Score"
+	label variable nocurve "Uncurved Q1 Score with Bonus"
 
 gen q1_final=q1_curved + bonus 
 replace q1_final=100 if q1_final>100 & q1_final!=. 
 	label variable q1_final "Curved Q1 with Bonus"
+	label variable q1_curved "Curved Q1 pre Bonus"
 
 /* Section Rankings */	
 egen n_q1_final = count(q1_final) 
@@ -46,7 +52,7 @@ label variable std_let "Letter Grade"
 tab std_let 
 
 /* Order Variables */
-order first last id q1_final curve4q1 std_let rank pcrank nocurve 
+order first last id q1_final curve4q1 std_let rank pcrank nocurve  q1 bonus q1_curved
 
 /* Summerize Grades */
 sum nocurve q1_final curve4q1
@@ -55,6 +61,6 @@ sum nocurve q1_final curve4q1
 sort last first
 
 /* Export Data */
-*export delimited first last id q1_final curve4q1_final rank using "q1_final.csv", replace
+*export delimited first last id q1_final curve4q1_final rank q1 bonus using "q1_final.csv", replace
 
 scatter pcrank q1_final, mlabel(std_let) ms(none) mlabposition(0)
