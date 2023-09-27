@@ -1,5 +1,5 @@
 program perfcurve
-version 15.0
+version 14.0
 
 /*Obtain mean of raw grade*/
 quietly: sum `1'
