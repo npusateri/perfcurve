@@ -18,11 +18,11 @@ where $x$ is the raw score, $n=\frac{log(g/100)}{log(\overline{x}/100)}$, $g$ is
 Note that mean of the curved scores is not equal to the specified goal score, but rather, the raw mean is curved up to the specified goal score, and then the resulting curve function applied to each score.
 
 ## Installation
-The perfered installation method for the *perfcurve* package is via the **github** command. You can install the **github** command with the following code:
-  net install github, from("https://haghish.github.io/github/")
+The perfered installation method for the *perfcurve* package is via the **github** command. You can install the **github** command with the following code:  
+    - net install github, from("https://haghish.github.io/github/")
 
-Once the **github** command is installed, simply run the following code to install the **perfcurve** command  
-  github install npusateri/perfcurve
+Once the **github** command is installed, simply run the following code to install the **perfcurve** command    
+    - github install npusateri/perfcurve
 
 ## References
 Lawrence Sher. 1977. “The Perfect Curve: At Least for Grades”.  The Two-Year College Mathematics Journal. DOI: [https://doi.org/10.2307/3027265](https://doi.org/10.2307/3027265)
