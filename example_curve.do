@@ -1,20 +1,26 @@
 clear all
 
-/*	Set Working Directory to Location of Data 
-	commented out for example */
+/*	
+	Set Working Directory to Location of Data 
+	commented out for example
+*/
 * cd 
 
 /*	Import Data */
 import delimited "fictional_q1.csv"
 
-/*	Curve Grades 
-	Here, the curve function is set to transform the pre-curve average (62.96) to an 80 */
+/*	
+	Grades 
+	Here, the curve function is set to transform the pre-curve average (62.96) to an 80 
+*/
 perfcurve q1 80
 
-/*  Add Bonus (up to 100 pts total) 
-	It is critical that this step is done after the curve. 
+/*  
+	Add Bonus (up to 100 pts total) 
+	It is critical that this step is done after the curve
 	If the Bonus is added before the curve, it no longer functions as an optinal bonus 
-	If there is no bonus, this block can be skipped */
+	If there is no bonus, this block can be skipped 
+*/
 gen nocurve=q1+bonus 
 	label variable nocurve "Uncurved Q1 Score with Bonus"
 
@@ -23,7 +29,7 @@ replace q1_final=100 if q1_final>100 & q1_final!=.
 	label variable q1_final "Curved Q1 with Bonus"
 	label variable q1_curved "Curved Q1 pre Bonus"
 
-/* Section Rankings */	
+/*	Section Rankings */	
 egen n_q1_final = count(q1_final) 
 egen i_q1_final = rank(q1_final) , track 
 sum i_q1_final
@@ -34,7 +40,7 @@ gen pcrank = ((i_q1_final - 1) / (n_q1_final - 1))*100
 drop n_q1_final i_q1_final
 
 
-/* Generate Standard Letter Grades */
+/*	Generate Standard Letter Grades */
 gen     std_let = "F"  if q1_final<60
 replace std_let = "D"  if q1_final>=60 & q1_final <67
 replace std_let = "D+" if q1_final>=67 & q1_final <70
@@ -51,16 +57,20 @@ label variable std_let "Letter Grade"
 
 tab std_let 
 
-/* Order Variables */
+/*	Order Variables */
 order first last id q1_final curve4q1 std_let rank pcrank nocurve  q1 bonus q1_curved
 
-/* Summerize Grades */
+/*	Summerize Grades */
 sum nocurve q1_final curve4q1
 
-/* Sort Data */
+/*	Sort Data */
 sort last first
 
-/* Export Data */
+/*	
+	Export Data 
+	commented out
+*/
 *export delimited first last id q1_final curve4q1_final rank q1 bonus using "q1_final.csv", replace
 
+/*	Visual Grades */
 scatter pcrank q1_final, mlabel(std_let) ms(none) mlabposition(0)
