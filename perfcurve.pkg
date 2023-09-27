@@ -1,0 +1,9 @@
+v 1
+d perfcurve.  Package to curve exam scores following Lawrence Sher (1997).
+d Program by Nic Pusateri.
+d Version 1.0, 2023-9-01.
+
+* I can also insert comments; these will not be displayed.
+* f lines name the files that comprise your package:
+f perfcurve.ado
+f perfcurve.sthlp
