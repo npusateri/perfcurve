@@ -1,0 +1,7 @@
+v 1.0
+d Materials by Nic PUsateri
+d https://github.com/npusateri/perfcurve
+
+d 'perfcurve': curve exam scores according to “The Perfect Curve: At Least for Grades” by Lawrence Sher 1977
+
+p perfcurve
