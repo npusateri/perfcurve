@@ -12,7 +12,7 @@ Sher (1977) outlines the following three principles for the "perfect curve"
 
 Specifically, the command identifies the mean of the uncurved scores, calculates a curve function to adjust that uncurved mean score to a new specified score, and then applied the curve function to all the scores. The curve function is applied iff the mean of the raw scores is less than the newly specified goal score.  The mean of raw score, $\overline{x}$, is curved up to specified score, $g$, according to the function 
 
-$$f(x)=10^{(2-2n)} \times x^{n}$$, 
+$$f(x)=10^{(2-2n)} \times x^{n},$$
 
 where $x$ is the raw score, $n=\frac{log(g/100)}{log(\overline{x}/100)}$, $g$ is the goal score, and $\overline{x}$ is the mean of raw score.
 
