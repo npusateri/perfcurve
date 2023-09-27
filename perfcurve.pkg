@@ -1,10 +1,10 @@
-v 1
-d perfcurve.  Package to curve exam scores following Lawrence Sher (1997).
-d Program by Nic Pusateri.
-d Version 1.1, 2023-9-27.
-
-* I can also insert comments; these will not be displayed.
-* f lines name the files that comprise your package:
-    
-f perfcurve.ado
-f perfcurve.sthlp
+v 1.1
+d 'PERFCURVE': a package to curve exam scores
+d 
+d Curve exam scores according to “The Perfect Curve: At Least for Grades” by Lawrence Sher 1977.
+d 
+d Distribution-Date:   20230927
+d License: MIT
+d 
+F perfcurve.ado
+F perfcurve.sthlp
