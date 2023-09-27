@@ -1,5 +1,5 @@
 {smcl}
-{* *! version 0.1 06july2023}{...}
+{* *! version 1.1 27september2023}{...}
 {findalias asfradohelp}{...}
 {vieweralsosee "" "--"}{...}
 {vieweralsosee "[R] help" "help help"}{...}
@@ -32,12 +32,12 @@ The mean of {var} is curved up to # according to the function f(x)=10^(2-2n)*x^n
 where n=log(#/100)/log(xbar/100), where xbar is the mean of {var}. 
 
 {pstd}
-If the curve is applied, {bf:perfcurve} generates three new variables: (1) {var}_adj: the curved scores;
-(2) {var}_curve: the per score curve for each score; and, (3) {var}_rndadj: rounded curved scores. 
+If the curve is applied, {bf:perfcurve} generates two new variables: (1) {var}_curved: the curved scores and
+(2) curve4{var}: the per score curve for each score. 
 
 {pstd}
 {bf:perfcurve} reports the number, mean, median, standard deviation, min, max, and inter-quartile range 
-of the original, the adjusted, and the rounded adjusted scores.
+of the original scores, the curved scores, and the curve.
 
 {pstd}
 If the mean of the raw scores is greater than or equal to the desired score, #, the curve is not applied.
@@ -48,12 +48,14 @@ If the mean of the raw scores is greater than or equal to the desired score, #, 
 {phang}{cmd:. perfcurve quiz1 80}{p_end}
 
 {pstd} where the mean score of quiz1 will be curved to an 80, and the curve function will be applied to each score. 
-Note that mean of quiz1_adj is not an 80, but rather, the orignal mean is curved up to an 80, 
+Note that mean of quiz1_curved is not an 80, but rather, the orignal mean is curved up to an 80, 
 and then the resulting curve applied to each score.
 
 
 {marker references}{...}
 {title:References}
+
+{browse "https://github.com/npusateri/perfcurve": “https://github.com/npusateri/perfcurve”}  
 
 {marker LS1997}{...}
 {phang}
