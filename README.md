@@ -1,14 +1,11 @@
-# perfcurve
-A Stata package to curve exam scores
+# The Perfect Curve
 
-## The Perfect Curve
+The *perfcurve* package contains the Stata command **perfcurve** which curves the scores of an assessment according to “The Perfect Curve: At Least for Grades” by Sher (1977).
 
-The perfcurve command curves the scores of an assessment according to “The Perfect Curve: At Least for Grades” by Sher (1977).
-
-Sher (1977) outlines the following three principles for the "perfect curve"
+Sher (1977) outlines the following three principles for the "perfect curve":
 1. 0's remain 0's
 2. 100's remain 100's
-3. the curve function is monotonic
+3. the curve function is monotonic.
 
 Specifically, the command identifies the mean of the uncurved scores, calculates a curve function to adjust that uncurved mean score to a new specified score, and then applied the curve function to all the scores. The curve function is applied iff the mean of the raw scores is less than the newly specified goal score.  The mean of raw score, $\overline{x}$, is curved up to specified score, $g$, according to the function 
 
