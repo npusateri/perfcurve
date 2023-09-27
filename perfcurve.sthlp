@@ -56,7 +56,7 @@ and then the resulting curve applied to each score.
 {title:References}
 
 {phang}
-{browse "https://github.com/npusateri/perfcurve": “perfcurve on Github”}  
+Package documentation on {browse "https://github.com/npusateri/perfcurve": Github}.  
 
 {marker LS1997}{...}
 {phang}
