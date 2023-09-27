@@ -13,7 +13,7 @@ Specifically, the command identifies the mean of the uncurved scores, calculates
 
 $$f(x)=10^{(2-2n)} \times x^{n},$$
 
-where $x$ is the raw score, $n=\frac{log(\frac{g}{100}}{log(\frac{\overline{x}}{100}}$, $g$ is the goal score, and $\overline{x}$ is the mean of raw score.
+where $x$ is the raw score, $n=\frac{log(\frac{g}{100})}{log(\frac{\overline{x}}{100})}$, $g$ is the goal score, and $\overline{x}$ is the mean of raw score.
 
 Note that mean of the curved scores is not equal to the specified goal score, but rather, the raw mean is curved up to the specified goal score, and then the resulting curve function applied to each score.
 
