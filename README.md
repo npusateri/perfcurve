@@ -30,6 +30,9 @@ Once the **github** command is installed, simply run the following code to insta
 github install npusateri/perfcurve
 ```
 
+## Example 
+example_curve.do provides an example use of **perfcurve** with fictional_q1.csv data. These files are available in the perfcurve github repo.
+
 ## References
 Haghish, E. F. (2020). Developing, maintaining, and hosting Stata statistical software on GitHub. The Stata Journal, 20(4), 931-951.  
 Sher, Lawrence. (1977). The Perfect Curve: At Least for Grades. The Two-Year College Mathematics Journal. 8(3), 148–52. DOI: [https://doi.org/10.2307/3027265](https://doi.org/10.2307/3027265)
